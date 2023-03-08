@@ -8,8 +8,7 @@ public class Main {
         Queue<Person> queue = new LinkedList<>(generateClients());
         while (!queue.isEmpty()){
             System.out.println(queue.peek());
-            queue.peek().ride();
-            if (queue.peek().haveTickets()==true){
+            if (queue.peek().ride()==true){
                 queue.offer(queue.poll());
             }
             else {

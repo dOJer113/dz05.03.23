@@ -13,18 +13,15 @@ public class Person {
     public String toString(){
         return name + ' ' + surname + " прокатился на атракционе";
     }
-    public void ride(){
-        tickets-=1;
-
-        System.out.println("Я покатался");
-    }
-    public boolean haveTickets(){
-        if (tickets>0){
+    public boolean ride(){
+        if (tickets-1>0){
+            tickets-=1;
             return true;
         }
         else{
             return false;
         }
+
     }
 
 }
